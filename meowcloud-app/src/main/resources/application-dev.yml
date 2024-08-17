@@ -1,0 +1,10 @@
+server:
+  servlet:
+    context-path: /meowcloud
+
+doc-info:
+  title: 猫猫云文档
+  enable: true
+
+app:
+  public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAElgqbThwLQHPWjZCGdBSl52tDXUyd2oOD67oAnTozMzuUYqKNQHtdd1qtvS+xrNVJyCWwm4tbiwiRDvjnBCJSyg==
