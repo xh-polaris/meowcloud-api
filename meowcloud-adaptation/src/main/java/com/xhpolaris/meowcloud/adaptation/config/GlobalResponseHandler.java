@@ -21,6 +21,10 @@ public class GlobalResponseHandler implements ResponseBodyAdvice<Object> {
         return true;
     }
 
+    /**
+     * 因为Spring Boot默认使用JackSon来处理对象的序列化
+     * 所以这里统一返回Result不会出现问题
+     */
     @Override
     public Object beforeBodyWrite(Object body,
                                   @Nonnull MethodParameter returnType,

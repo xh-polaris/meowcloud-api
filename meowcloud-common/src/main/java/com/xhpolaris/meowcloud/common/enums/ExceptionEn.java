@@ -6,3 +6,4 @@ public interface ExceptionEn {
 
     String getMsg();
 }
+
