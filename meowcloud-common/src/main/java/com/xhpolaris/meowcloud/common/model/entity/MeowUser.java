@@ -1,4 +1,4 @@
-package com.xhpolaris.meowcloud.domain.model.entity;
+package com.xhpolaris.meowcloud.common.model.entity;
 
 import com.xhpolaris.idlgen.basic.UserMeta;
 import io.swagger.annotations.ApiModel;

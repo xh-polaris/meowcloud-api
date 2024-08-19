@@ -1,44 +1,42 @@
-package com.xhpolaris.meowcloud.adaptation.http.controller;
+package com.xhpolaris.meowcloud.domain.service.impl;
 
-import com.xhpolaris.meowcloud.adaptation.http.api.ActionApi;
 import com.xhpolaris.meowcloud.common.model.cmd.FollowCmd;
 import com.xhpolaris.meowcloud.common.model.cmd.LikeCmd;
 import com.xhpolaris.meowcloud.common.model.cmd.ShareCmd;
+import com.xhpolaris.meowcloud.domain.rpc.ActionRpc;
 import com.xhpolaris.meowcloud.domain.service.ActionService;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
-@Slf4j
-@RestController
+@Service
 @RequiredArgsConstructor
-public class ActionController implements ActionApi {
+public class ActionServiceImpl implements ActionService {
 
-    private final ActionService service;
+    private final ActionRpc actionRpc;
 
 
     @Override
     public boolean doLike(LikeCmd.DoLikeCmd cmd) {
-        return service.doLike(cmd);
+        return actionRpc.doLike(cmd);
     }
 
     @Override
     public boolean cancelLike(LikeCmd.CancelLikeCmd cmd) {
-        return service.cancelLike(cmd);
+        return actionRpc.cancelLike(cmd);
     }
 
     @Override
     public boolean doFollow(FollowCmd.DoFollowCmd cmd) {
-        return service.doFollow(cmd);
+        return actionRpc.doFollow(cmd);
     }
 
     @Override
     public boolean cancelFollow(FollowCmd.CancelFollowCmd cmd) {
-        return service.cancelFollow(cmd);
+        return actionRpc.cancelFollow(cmd);
     }
 
     @Override
     public boolean doShare(ShareCmd.DoShareCmd cmd) {
-        return service.doShare(cmd);
+        return actionRpc.doShare(cmd);
     }
 }

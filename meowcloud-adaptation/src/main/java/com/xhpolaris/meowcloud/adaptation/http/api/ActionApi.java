@@ -1,8 +1,8 @@
 package com.xhpolaris.meowcloud.adaptation.http.api;
 
-import com.xhpolaris.meowcloud.domain.model.cmd.FollowCmd;
-import com.xhpolaris.meowcloud.domain.model.cmd.LikeCmd;
-import com.xhpolaris.meowcloud.domain.model.cmd.ShareCmd;
+import com.xhpolaris.meowcloud.common.model.cmd.FollowCmd;
+import com.xhpolaris.meowcloud.common.model.cmd.LikeCmd;
+import com.xhpolaris.meowcloud.common.model.cmd.ShareCmd;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.PostMapping;

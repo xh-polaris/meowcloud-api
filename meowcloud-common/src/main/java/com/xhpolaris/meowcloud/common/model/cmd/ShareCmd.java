@@ -1,4 +1,4 @@
-package com.xhpolaris.meowcloud.domain.model.cmd;
+package com.xhpolaris.meowcloud.common.model.cmd;
 
 import com.xhpolaris.idlgen.meowcloud.action.TargetType;
 import io.swagger.v3.oas.annotations.media.Schema;
