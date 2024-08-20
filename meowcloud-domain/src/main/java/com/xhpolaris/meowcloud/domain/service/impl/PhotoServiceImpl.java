@@ -1,34 +1,33 @@
-package com.xhpolaris.meowcloud.adaptation.http.controller;
+package com.xhpolaris.meowcloud.domain.service.impl;
 
-import com.xhpolaris.meowcloud.adaptation.http.api.PhotoApi;
 import com.xhpolaris.meowcloud.common.model.vo.PhotoDetailVO;
 import com.xhpolaris.meowcloud.common.model.vo.PhotoVO;
+import com.xhpolaris.meowcloud.domain.rpc.PhotoRpc;
 import com.xhpolaris.meowcloud.domain.service.PhotoService;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Slf4j
-@RestController
 @RequiredArgsConstructor
-public class PhotoController implements PhotoApi {
+public class PhotoServiceImpl implements PhotoService {
 
-    private final PhotoService photoService;
+    private final PhotoRpc photoRpc;
 
     @Override
     public List<PhotoVO> getAll() {
-        return photoService.getAll();
+        // TODO 获取所有相册
+        return null;
     }
 
     @Override
     public List<PhotoVO> getPhotoByAlbum(String id) {
-        return photoService.getPhotoByAlbum(id);
+        // TODO 根据相册获取所有照片
+        return null;
     }
 
     @Override
     public PhotoDetailVO getPhotoDetail(String id) {
-        return photoService.getPhotoDetail(id);
+        // TODO 获取照片细节
+        return null;
     }
 }
