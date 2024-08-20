@@ -5,6 +5,7 @@ import com.xhpolaris.meowcloud.common.model.vo.MeowUserVO;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Tag(name = "UserApi",description = "用户相关接口")
@@ -17,5 +18,5 @@ public interface UserApi {
 
     // 更新用户信息
     @PostMapping
-    boolean updateUserInfo(UserCmd.updateUserCmd cmd);
+    boolean updateUserInfo(@RequestBody UserCmd.updateUserCmd cmd);
 }

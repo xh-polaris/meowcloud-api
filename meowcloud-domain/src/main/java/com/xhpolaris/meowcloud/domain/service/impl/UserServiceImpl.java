@@ -16,12 +16,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public MeowUserVO getUserInfo() {
         // TODO rpc获取用户信息 待完善
+
+        // TODO rpc获取存储信息
+
+        // TODO 整合用户信息和存储信息转储到VO对象中
+
         return new MeowUserVO();
     }
 
     @Override
     public boolean updateUserInfo(UserCmd.updateUserCmd cmd) {
-        // TODO 待完善
+        // TODO 调用rpc更新用户信息
         return false;
     }
 }

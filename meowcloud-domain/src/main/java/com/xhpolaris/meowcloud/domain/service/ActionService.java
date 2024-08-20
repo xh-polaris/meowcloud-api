@@ -3,7 +3,9 @@ package com.xhpolaris.meowcloud.domain.service;
 import com.xhpolaris.meowcloud.common.model.cmd.FollowCmd;
 import com.xhpolaris.meowcloud.common.model.cmd.LikeCmd;
 import com.xhpolaris.meowcloud.common.model.cmd.ShareCmd;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface ActionService {
     boolean doLike(LikeCmd.DoLikeCmd cmd);
 
