@@ -4,7 +4,7 @@ ARG WORKDIR=/opt/run
 
 WORKDIR ${WORKDIR}
 COPY run/lib run/lib
-COPY meowcloud-app/target/meowcloud-api-1.0.0.jar meowcloud.jar
+COPY /meowcloud-app/target/meowcloud-app-1.0.0.jar meowcloud.jar
 
 EXPOSE 5508
 
