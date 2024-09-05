@@ -1,8 +1,10 @@
 package com.xhpolaris.meowcloud.common.model.vo.album;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class AlbumBasicVO {
 
     // 相册id

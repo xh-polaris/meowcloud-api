@@ -2,8 +2,10 @@ package com.xhpolaris.meowcloud.common.model.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 
 @ApiModel("存储信息展示")
+@AllArgsConstructor
 public class MemoryVO {
 
     // TODO 已使用内存的展示模式，初步计划为1Byte为最小存储单位

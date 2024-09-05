@@ -2,10 +2,13 @@ package com.xhpolaris.meowcloud.common.model.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 @ApiModel("简要用户信息展示")
 @Data
+@AllArgsConstructor
 public class MeowUserVO {
     @ApiModelProperty("用户id")
     private String id;

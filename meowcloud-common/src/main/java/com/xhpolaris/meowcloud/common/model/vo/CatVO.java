@@ -1,8 +1,10 @@
 package com.xhpolaris.meowcloud.common.model.vo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class CatVO {
     // 猫猫id
     private String id;
