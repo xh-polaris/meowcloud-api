@@ -1,7 +1,0 @@
-server:
-  servlet:
-    context-path: /meowcloud
-
-doc-info:
-  title: 猫猫云文档
-  enable: true
