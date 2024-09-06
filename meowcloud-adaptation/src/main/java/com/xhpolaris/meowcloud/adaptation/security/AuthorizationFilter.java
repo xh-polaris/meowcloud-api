@@ -22,6 +22,12 @@ public class AuthorizationFilter implements Filter {
         // 获取token
         String token = httpRequest.getHeader("Authorization");
 
+        String requestURI = httpRequest.getRequestURI();
+        // 跳过Swagger请求路径
+        if (requestURI.startsWith("/meowcloud/swagger-ui") || requestURI.startsWith("/meowcloud/v3/api-docs")) {
+            filterChain.doFilter(servletRequest, servletResponse);
+            return;
+        }
 
 
         if (token != null && token.startsWith("Bearer ")) {

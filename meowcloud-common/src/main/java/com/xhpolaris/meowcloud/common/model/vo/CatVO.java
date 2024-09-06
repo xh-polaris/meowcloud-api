@@ -1,10 +1,12 @@
 package com.xhpolaris.meowcloud.common.model.vo;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
+@Schema(description = "猫猫信息")
 public class CatVO {
     // 猫猫id
     private String id;

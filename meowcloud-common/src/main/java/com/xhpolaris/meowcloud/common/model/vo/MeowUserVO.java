@@ -2,6 +2,7 @@ package com.xhpolaris.meowcloud.common.model.vo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.experimental.Accessors;
@@ -9,6 +10,7 @@ import lombok.experimental.Accessors;
 @ApiModel("简要用户信息展示")
 @Data
 @AllArgsConstructor
+@Schema(description = "用户详细信息")
 public class MeowUserVO {
     @ApiModelProperty("用户id")
     private String id;

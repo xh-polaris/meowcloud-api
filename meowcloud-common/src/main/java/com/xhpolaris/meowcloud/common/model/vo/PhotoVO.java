@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
-@Schema(name = "照片简要信息")
+@Schema(description = "照片简要信息")
 public class PhotoVO {
 
     private String id;
