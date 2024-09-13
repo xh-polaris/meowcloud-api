@@ -1,8 +1,11 @@
 package com.xhpolaris.meowcloud.domain.service.impl;
 
+import com.xhpolaris.idlgen.basic.APP;
+import com.xhpolaris.idlgen.basic.UserMeta;
 import com.xhpolaris.meowcloud.common.model.cmd.UserCmd;
 import com.xhpolaris.meowcloud.common.model.vo.MemoryVO;
-import com.xhpolaris.meowcloud.common.model.vo.MeowUserVO;
+import com.xhpolaris.meowcloud.common.model.vo.user.MeowUserInfoVO;
+import com.xhpolaris.meowcloud.common.model.vo.user.MeowUserVO;
 import com.xhpolaris.meowcloud.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,6 +21,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean updateUserInfo(UserCmd.updateUserCmd cmd) {
         return true;
+    }
+
+    @Override
+    public MeowUserInfoVO getUserDetailInfo() {
+        return new MeowUserInfoVO(UserMeta.newBuilder().setUserId("用户id123456").setAppId(APP.valueOf("wx5cd5f83abe0ab38e")).setDeviceId("test").setSessionAppId(APP.valueOf("wx5cd5f83abe0ab38e")).setIsLogin(true).build(),
+                "个性签名","https://cdn.oaistatic.com/assets/favicon-32x32-frb1kl3v.webp","memberInfoId123456","albumInfoId123456",
+                "teamInfoId123456","memoryInfoId123456","pointInoId123456","achievementInfoId123456"
+                );
     }
 
 //    private final UserRpc userRpc;

@@ -2,7 +2,8 @@ package com.xhpolaris.meowcloud.adaptation.http.controller;
 
 import com.xhpolaris.meowcloud.adaptation.http.api.UserApi;
 import com.xhpolaris.meowcloud.common.model.cmd.UserCmd;
-import com.xhpolaris.meowcloud.common.model.vo.MeowUserVO;
+import com.xhpolaris.meowcloud.common.model.vo.user.MeowUserInfoVO;
+import com.xhpolaris.meowcloud.common.model.vo.user.MeowUserVO;
 import com.xhpolaris.meowcloud.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -14,6 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController implements UserApi {
 
     private final UserService userService;
+
+    @Override
+    public MeowUserInfoVO getUserDetailInfo() {
+        return userService.getUserDetailInfo();
+    }
 
     @Override
     public MeowUserVO getUserInfo() {
