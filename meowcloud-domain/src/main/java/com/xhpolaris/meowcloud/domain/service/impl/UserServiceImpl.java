@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     @Override
     public MeowUserVO getUserInfo() {
-        return new MeowUserVO("用户id123456","用户名","啥也没有写","https://cdn.oaistatic.com/assets/favicon-32x32-frb1kl3v.webp",12,23,5,999,new MemoryVO(1024*1024L,128L,23L,50));
+        return new MeowUserVO("用户id123456","用户名","啥也没有写","https://cdn.oaistatic.com/assets/favicon-32x32-frb1kl3v.webp",12,23,5,999,new MemoryVO(1024*1024L,128L,23L,51));
     }
 
     @Override
