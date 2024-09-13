@@ -5,13 +5,13 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class MeowUserInfoVO {
-    UserMeta userMeta;
-    String signature;
-    String avatar;
-    String memberInfoId;
-    String albumInfoId;
-    String teamInfoId;
-    String memoryInfoId;
-    String pointInfoId;
-    String achievementInfoId;
+    public UserMeta userMeta;
+    public String signature;
+    public String avatar;
+    public String memberInfoId;
+    public String albumInfoId;
+    public String teamInfoId;
+    public String memoryInfoId;
+    public String pointInfoId;
+    public String achievementInfoId;
 }

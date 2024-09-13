@@ -4,10 +4,12 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 
 @ApiModel("存储信息展示")
 @AllArgsConstructor
 @Schema(description = "存储信息")
+@Data
 public class MemoryVO {
 
     // TODO 已使用内存的展示模式，初步计划为1Byte为最小存储单位

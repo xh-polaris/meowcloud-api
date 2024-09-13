@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public MeowUserInfoVO getUserDetailInfo() {
-        return new MeowUserInfoVO(UserMeta.newBuilder().setUserId("用户id123456").setAppId(APP.valueOf("wx5cd5f83abe0ab38e")).setDeviceId("test").setSessionAppId(APP.valueOf("wx5cd5f83abe0ab38e")).setIsLogin(true).build(),
+        return new MeowUserInfoVO(null,
                 "个性签名","https://cdn.oaistatic.com/assets/favicon-32x32-frb1kl3v.webp","memberInfoId123456","albumInfoId123456",
                 "teamInfoId123456","memoryInfoId123456","pointInoId123456","achievementInfoId123456"
                 );
