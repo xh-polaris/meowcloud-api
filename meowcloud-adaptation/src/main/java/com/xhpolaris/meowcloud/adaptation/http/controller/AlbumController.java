@@ -8,6 +8,7 @@ import com.xhpolaris.meowcloud.common.model.vo.album.AlbumInfoVO;
 import com.xhpolaris.meowcloud.domain.service.AlbumService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -19,10 +20,14 @@ public class AlbumController implements AlbumApi {
 
     private final AlbumService albumService;
 
-    // TODO 修改albumType为枚举类型
     @Override
-    public List<AlbumBasicVO> getCatAlbum(Integer albumType) {
-        return albumService.getCatAlbum(albumType);
+    public List<AlbumBasicVO> getCatAlbum(int pageSize, int pageNum) {
+        return albumService.getCatAlbum(pageSize, pageNum);
+    }
+
+    @Override
+    public List<AlbumBasicVO> getTeamCatAlbum(Integer id, int pageSize, int pageNum) {
+        return albumService.getTeamCatAlbum(id, pageSize, pageNum);
     }
 
     // TODO 新建猫猫相册

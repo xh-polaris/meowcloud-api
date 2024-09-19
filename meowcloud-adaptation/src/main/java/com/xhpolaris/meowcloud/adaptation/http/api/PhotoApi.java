@@ -14,8 +14,8 @@ import java.util.List;
 public interface PhotoApi {
 
     // 获取根据时间顺序获取所有的相片
-    @GetMapping
-    List<PhotoVO> getAll();
+    @GetMapping("/{pageNum}/{pageSize}")
+    List<PhotoVO> getAll(@PathVariable int pageSize,@PathVariable int pageNum);
 
     // 根据相册获取相片
     @GetMapping("/{id}")

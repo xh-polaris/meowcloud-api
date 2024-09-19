@@ -7,5 +7,5 @@ import java.util.List;
 
 
 public interface TeamService {
-    List<TeamVO> getTeams();
+    List<TeamVO> getTeams(int pageSize,int pageNum);
 }

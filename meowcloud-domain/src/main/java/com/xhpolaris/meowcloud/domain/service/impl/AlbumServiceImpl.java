@@ -17,8 +17,13 @@ import java.util.List;
 @Service
 public class AlbumServiceImpl implements AlbumService {
     @Override
-    public List<AlbumBasicVO> getCatAlbum(Integer albumType) {
-        return albumType==0? List.of(new AlbumBasicVO("个人相册id123456789", "个人相册test01", 123L, "https://cdn.oaistatic.com/assets/favicon-32x32-frb1kl3v.webp")):List.of(new AlbumBasicVO("团队id123456789", "团队相册test01", 123L, "https://cdn.oaistatic.com/assets/favicon-32x32-frb1kl3v.webp"));
+    public List<AlbumBasicVO> getCatAlbum(int pageSize, int pageNum) {
+        return List.of(new AlbumBasicVO("个人相册id123456789", "个人相册test01", 123L, "https://cdn.oaistatic.com/assets/favicon-32x32-frb1kl3v.webp"));
+    }
+
+    @Override
+    public List<AlbumBasicVO> getTeamCatAlbum(Integer id, int pageSize, int pageNum) {
+        return List.of(new AlbumBasicVO("团队id" + id, "团队相册test01", 123L, "https://cdn.oaistatic.com/assets/favicon-32x32-frb1kl3v.webp"));
     }
 
     @Override

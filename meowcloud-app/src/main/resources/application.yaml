@@ -1,0 +1,64 @@
+server:
+  port: 5508
+  servlet:
+    context-path: /meowcloud
+
+logging:
+  level:
+    com.xhpolaris:
+      repository: info
+    org.springframework.web.filter:
+      CommonsRequestLoggingFilter: debug
+  file:
+    path: logs
+  logback:
+    rollingpolicy:
+      max-history: 30
+
+spring:
+  application:
+    name: meowcloud-api
+  servlet:
+    multipart:
+      max-file-size: 30MB
+      max-request-size: 30MB
+  profiles:
+    active: ${server.profile:dev}
+  mvc:
+    path-match:
+      matching-strategy: ant_path_matcher
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: true
+doc-info:
+  enable: ${doc.enable:true}
+  title: API文档
+  description: swagger.json
+  version: v1.0.1
+  website-name: API文档
+  website-url:
+
+# TODO 完善grpc配置
+#grpc:
+#  client:
+#    platform-sts:
+#      address: "static://platform-sts.xh-polaris:8080"
+#      enable-keep-alive: true
+#      negotiationType: PLAINTEXT
+
+
+management:
+  server:
+    port: 8182
+    address: 127.0.0.1
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  prometheus:
+    metrics:
+      export:
+        enabled: true

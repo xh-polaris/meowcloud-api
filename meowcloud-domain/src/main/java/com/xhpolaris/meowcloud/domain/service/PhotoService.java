@@ -8,7 +8,7 @@ import java.util.List;
 
 
 public interface PhotoService {
-    List<PhotoVO> getAll();
+    List<PhotoVO> getAll(int pageSize,int pageNum);
 
     List<PhotoVO> getPhotoByAlbum(String id);
 

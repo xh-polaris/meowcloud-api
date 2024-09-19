@@ -10,7 +10,9 @@ import java.util.List;
 
 
 public interface AlbumService {
-    List<AlbumBasicVO> getCatAlbum(Integer albumType);
+    List<AlbumBasicVO> getCatAlbum(int pageSize,int pageNum);
+
+    List<AlbumBasicVO> getTeamCatAlbum(Integer id,int pageSize,int pageNum);
 
     boolean createCatAlbum(AlbumCmd.CreateCatAlbumCmd cmd);
 

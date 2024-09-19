@@ -13,18 +13,18 @@ import java.util.List;
 @Service
 public class PhotoServiceImpl implements PhotoService {
     @Override
-    public List<PhotoVO> getAll() {
-        return List.of(new PhotoVO("相册id1",LocalDate.now(),"上海市",true,false),new PhotoVO("相册id2",LocalDate.now(),"上海市",true,false));
+    public List<PhotoVO> getAll(int pageSize, int pageNum) {
+        return List.of(new PhotoVO("相册id1", LocalDate.now(), "上海市", true, false), new PhotoVO("相册id2", LocalDate.now(), "上海市", true, false));
     }
 
     @Override
     public List<PhotoVO> getPhotoByAlbum(String id) {
-        return List.of(new PhotoVO("相册id1",LocalDate.now(),"上海市",true,false),new PhotoVO("相册id2",LocalDate.now(),"上海市",true,false));
+        return List.of(new PhotoVO("相册id1", LocalDate.now(), "上海市", true, false), new PhotoVO("相册id2", LocalDate.now(), "上海市", true, false));
     }
 
     @Override
     public PhotoDetailVO getPhotoDetail(String id) {
-        return new PhotoDetailVO(id,LocalDate.now(),"上海市",true,false,"照片的描述",123L,123L);
+        return new PhotoDetailVO(id, LocalDate.now(), "上海市", true, false, "照片的描述", 123L, 123L);
     }
 
 //    private final PhotoRpc photoRpc;

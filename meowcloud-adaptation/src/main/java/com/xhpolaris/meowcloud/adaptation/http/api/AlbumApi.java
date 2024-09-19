@@ -13,10 +13,13 @@ import java.util.List;
 @RequestMapping("/api/album")
 public interface AlbumApi {
 
-    // 获取猫猫相册列表
-    // TODO albumType改成枚举类型
-    @GetMapping("/basic/{albumType}")
-    List<AlbumBasicVO> getCatAlbum(@PathVariable Integer albumType);
+    // 获取个人猫猫相册列表
+    @GetMapping("/basic/{pageNum}/{pageSize}")
+    List<AlbumBasicVO> getCatAlbum(@PathVariable int pageSize,@PathVariable int pageNum);
+
+    // 获取团队猫猫相册列表
+    @GetMapping("/basic/team/{id}/{pageNum}/{pageSize}")
+    List<AlbumBasicVO> getTeamCatAlbum(@PathVariable Integer id,@PathVariable int pageSize,@PathVariable int pageNum);
 
     // TODO 新建猫猫相册
     @PostMapping
