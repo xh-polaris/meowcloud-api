@@ -12,7 +12,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import javax.annotation.Nonnull;
 
 // 全局响应处理，同一返回格式
-@RestControllerAdvice(basePackages = "com.xhpolaris.meowcloud.http")
+@RestControllerAdvice(basePackages = "com.xhpolaris.meowcloud.adaptation.http")
 public class GlobalResponseHandler implements ResponseBodyAdvice<Object> {
 
 

@@ -15,7 +15,7 @@ public interface PhotoApi {
 
     // 获取根据时间顺序获取所有的相片
     @GetMapping("/{pageNum}/{pageSize}")
-    List<PhotoVO> getAll(@PathVariable int pageSize,@PathVariable int pageNum);
+    List<PhotoVO> getAll(@PathVariable int pageNum,@PathVariable int pageSize);
 
     // 根据相册获取相片
     @GetMapping("/{id}")

@@ -17,7 +17,7 @@ public class TeamController implements TeamApi {
     private final TeamService teamService;
 
     @Override
-    public List<TeamVO> getTeams(int pageSize, int pageNum) {
+    public List<TeamVO> getTeams(int pageNum, int pageSize) {
         return teamService.getTeams(pageSize,pageNum);
     }
 }

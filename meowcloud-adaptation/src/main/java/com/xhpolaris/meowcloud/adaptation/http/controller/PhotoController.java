@@ -18,7 +18,7 @@ public class PhotoController implements PhotoApi {
     private final PhotoService photoService;
 
     @Override
-    public List<PhotoVO> getAll(int pageSize,int pageNum) {
+    public List<PhotoVO> getAll(int pageNum,int pageSize) {
         return photoService.getAll(pageSize,pageNum);
     }
 

@@ -15,11 +15,11 @@ public interface AlbumApi {
 
     // 获取个人猫猫相册列表
     @GetMapping("/basic/{pageNum}/{pageSize}")
-    List<AlbumBasicVO> getCatAlbum(@PathVariable int pageSize,@PathVariable int pageNum);
+    List<AlbumBasicVO> getCatAlbum(@PathVariable int pageNum,@PathVariable int pageSize);
 
     // 获取团队猫猫相册列表
     @GetMapping("/basic/team/{id}/{pageNum}/{pageSize}")
-    List<AlbumBasicVO> getTeamCatAlbum(@PathVariable Integer id,@PathVariable int pageSize,@PathVariable int pageNum);
+    List<AlbumBasicVO> getTeamCatAlbum(@PathVariable Integer id,@PathVariable int pageNum,@PathVariable int pageSize);
 
     // TODO 新建猫猫相册
     @PostMapping

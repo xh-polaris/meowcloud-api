@@ -21,12 +21,12 @@ public class AlbumController implements AlbumApi {
     private final AlbumService albumService;
 
     @Override
-    public List<AlbumBasicVO> getCatAlbum(int pageSize, int pageNum) {
+    public List<AlbumBasicVO> getCatAlbum(int pageNum, int pageSize) {
         return albumService.getCatAlbum(pageSize, pageNum);
     }
 
     @Override
-    public List<AlbumBasicVO> getTeamCatAlbum(Integer id, int pageSize, int pageNum) {
+    public List<AlbumBasicVO> getTeamCatAlbum(Integer id, int pageNum, int pageSize) {
         return albumService.getTeamCatAlbum(id, pageSize, pageNum);
     }
 

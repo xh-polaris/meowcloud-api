@@ -13,7 +13,7 @@ import java.util.List;
 public interface TeamApi {
     // 获取团队列表
     @GetMapping("/{pageNum}/{pageSize}")
-    List<TeamVO> getTeams(@PathVariable int pageSize, @PathVariable int pageNum);
+    List<TeamVO> getTeams(@PathVariable int pageNum, @PathVariable int pageSize);
 
     // TODO 成员管理
 }
